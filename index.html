@@ -198,6 +198,18 @@
     .day-banner .chips2{width:100%; margin-left:0;}
     .hero .inner{padding-bottom:40px;}
   }
+  /* ---------- A4 PDF 打印样式 ---------- */
+  @media print{
+    @page{size:A4; margin:10mm 9mm}
+    *{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    html,body{background:#fff}
+    .glass-nav,.capsule-bar,.toast,.navgo,.offmap{display:none !important}
+    section{padding:10px 0}
+    .hero{min-height:auto}
+    .hero .inner{padding-bottom:30px}
+    .day-sec{break-before:page; margin-top:0}
+    .tcard,.zcard,.fcard,.tcard2,.map-card,.day-banner{break-inside:avoid; box-shadow:none}
+  }
 </style>
 </head>
 <body>
@@ -1117,7 +1129,11 @@ document.querySelectorAll('.navgo').forEach(function(a){
 
 /* ---------- 下载 PDF（预览确认后执行） ---------- */
 document.getElementById('pdfBtn').addEventListener('click', function(){
-  showToast('预览版确认后，我再为你生成 A4 版 PDF 手册（当前不生成）');
+  var a = document.createElement('a');
+  a.href = 'pdf/' + encodeURIComponent('上海极致奢享_深度游行程规划指南.pdf');
+  a.download = '上海极致奢享_深度游行程规划指南.pdf';
+  document.body.appendChild(a); a.click(); a.remove();
+  showToast('已开始下载 A4 版 PDF 手册');
 });
 function showToast(msg){
   var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show');
