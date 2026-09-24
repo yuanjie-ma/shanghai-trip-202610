@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>上海 · 魔都深度自由行 | 梧桐深处 5天4夜行程规划指南</title>
+<script src="assets/css/tailwind.js"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: {
+        paper: '#FAF6EF', ink: '#2A2119',
+        d1: '#C9962E', d2: '#B4432C', d3: '#3E6B5E', d4: '#5C4A3A'
+      }
+    }}
+  };
+</script>
+<style>
+  :root{
+    --paper:#FAF6EF; --ink:#2A2119; --gold:#C9962E; --red:#B4432C;
+    --green:#3E6B5E; --brown:#5C4A3A; --line:#E4DCC8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper); color:var(--ink); font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; margin:0;}
+  .serif{font-family:"Songti SC","Noto Serif SC","STSong",serif}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 18px}
+
+  /* ---------- 玻璃拟态导航 ---------- */
+  .glass-nav{position:fixed; top:0; left:0; right:0; z-index:60;
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    background:rgba(250,246,239,.82); border-bottom:1px solid rgba(42,33,25,.10);
+    box-shadow:0 2px 18px rgba(42,33,25,.06);}
+  .nav-inner{max-width:1180px; margin:0 auto; padding:10px 18px; display:flex; align-items:center; gap:14px;}
+  .logo-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#C9962E,#B4432C);
+    display:flex;align-items:center;justify-content:center;color:#FAF6EF;font-weight:800;font-size:19px;
+    box-shadow:0 4px 10px rgba(180,67,44,.28); flex:none;}
+  .nav-links{display:flex; gap:4px; flex-wrap:wrap; align-items:center;}
+  .nav-links a{color:var(--ink); text-decoration:none; font-size:13.5px; padding:6px 10px; border-radius:8px; opacity:.8;}
+  .nav-links a:hover{opacity:1; background:rgba(42,33,25,.06);}
+  .pdf-btn{margin-left:auto; background:var(--ink); color:var(--paper); border:none; border-radius:10px;
+    padding:9px 16px; font-size:13.5px; font-weight:600; cursor:pointer; white-space:nowrap;
+    box-shadow:0 4px 12px rgba(42,33,25,.2);}
+  .pdf-btn:hover{background:#44362a}
+
+  /* ---------- 英雄横幅 ---------- */
+  .hero{position:relative; min-height:88vh; display:flex; align-items:flex-end; overflow:hidden;}
+  .hero img.bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .hero .veil{position:absolute; inset:0; background:linear-gradient(180deg, rgba(42,33,25,.18) 0%, rgba(42,33,25,.30) 38%, rgba(42,33,25,.82) 100%);}
+  .hero .inner{position:relative; width:100%; color:#FAF6EF; padding:0 0 56px;}
+  .hero .overline{letter-spacing:.32em; font-size:13px; opacity:.85; margin-bottom:12px;}
+  .hero h1{font-size:clamp(34px,6vw,72px); line-height:1.12; margin:0 0 8px; font-weight:800;}
+  .hero h1 .l2{display:block; font-size:clamp(22px,3.6vw,40px); font-weight:600; opacity:.96;}
+  .hero .meta{font-size:14px; opacity:.85; margin-top:14px; letter-spacing:.06em;}
+  .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px;}
+  .chip{display:inline-flex; align-items:center; gap:6px; background:rgba(250,246,239,.16);
+    backdrop-filter:blur(6px); border:1px solid rgba(250,246,239,.35); color:#FAF6EF;
+    border-radius:999px; padding:7px 15px; font-size:13px;}
+  .chip i{width:7px;height:7px;border-radius:50%;display:inline-block}
+
+  /* ---------- 天数筛选胶囊 ---------- */
+  .capsule-bar{position:sticky; top:59px; z-index:50; background:rgba(250,246,239,.94);
+    backdrop-filter:blur(10px); border-bottom:1px solid rgba(42,33,25,.08); padding:10px 0;}
+  .caps{display:flex; gap:8px; overflow-x:auto; padding-bottom:2px;}
+  .caps button{flex:none; border:1px solid var(--line); background:#fff; color:var(--ink);
+    border-radius:999px; padding:8px 16px; font-size:13.5px; cursor:pointer; transition:.15s;}
+  .caps button:hover{border-color:var(--ink);}
+  .caps button.on{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .caps button .d{display:inline-block; margin-right:6px; font-weight:700;}
+  .caps button .dt{opacity:.75; font-size:12px;}
+
+  /* ---------- 通用区块 ---------- */
+  section{padding:46px 0 14px;}
+  .sec-head{display:flex; align-items:baseline; gap:14px; margin-bottom:6px;}
+  .sec-head .k{font-size:26px; font-weight:800;}
+  .sec-head .sub{font-size:13px; opacity:.6; letter-spacing:.08em;}
+  .sec-note{font-size:13px; opacity:.68; margin-bottom:20px;}
+
+  /* ---------- 地图 ---------- */
+  .map-card{background:#fff; border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:0 8px 30px rgba(42,33,25,.07);}
+  .map-frame{position:relative; width:100%; border-radius:12px; overflow:hidden;}
+  .map-frame>img{width:100%; height:auto; display:block;}
+  .map-ov{position:absolute; inset:0;}
+  .map-ov svg{width:100%; height:100%; display:block;}
+  .m-node{position:absolute; transform:translate(-50%,-50%); z-index:5;}
+  .m-node .dot{width:12px;height:12px;border-radius:50%; border:2px solid #fff; box-shadow:0 1px 5px rgba(0,0,0,.35);}
+  .m-node .dot.sq{border-radius:3px;}
+  .m-node .lb{position:absolute; top:16px; left:50%; transform:translateX(-50%);
+    background:rgba(255,255,255,.92); border-radius:6px; padding:2px 7px; font-size:11px;
+    white-space:nowrap; color:var(--ink); box-shadow:0 1px 4px rgba(0,0,0,.18); border:1px solid var(--line);}
+  .map-legend{display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:10px; font-size:12.5px; color:#6b6257;}
+  .map-legend .li{display:flex; align-items:center; gap:6px;}
+  .map-legend .sw{width:12px;height:12px;border-radius:50%;border:1px solid rgba(0,0,0,.15);}
+  .map-attr{position:absolute; right:8px; bottom:6px; font-size:10.5px; color:#5b544a; background:rgba(255,255,255,.75); padding:1px 6px; border-radius:5px; z-index:6;}
+  .offmap{position:absolute; right:2px; top:46%; z-index:6; font-size:11.5px; color:#5b544a;
+    background:rgba(255,255,255,.9); border:1px dashed var(--line); border-radius:8px; padding:6px 8px; max-width:118px;}
+
+  /* ---------- 片区卡片 ---------- */
+  .zone-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  @media(max-width:960px){.zone-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.zone-grid{grid-template-columns:1fr}}
+  .zcard{border-radius:16px; padding:16px; border:1px solid var(--line); background:#fff; position:relative; overflow:hidden;}
+  .zcard::before{content:""; position:absolute; left:0; top:0; bottom:0; width:5px;}
+  .zcard .zd{font-size:11.5px; opacity:.6; letter-spacing:.1em;}
+  .zcard .zt{font-size:17px; font-weight:800; margin:3px 0 8px;}
+  .zcard ul{margin:0; padding:0 0 0 16px; font-size:12.8px; line-height:1.7; color:#4d453c;}
+  .zcard .zh{margin-top:10px; display:inline-block; font-size:11.5px; border-radius:999px; padding:3px 10px; color:#fff;}
+
+  /* ---------- 每日行程 ---------- */
+  .day-sec{scroll-margin-top:116px; margin-top:26px;}
+  .day-banner{border-radius:20px; padding:22px 26px; color:#FAF6EF; position:relative; overflow:hidden;
+    background:linear-gradient(120deg,#2A2119 0%, #3A2E22 62%, #4A3A2A 100%);}
+  .day-banner .glow{position:absolute; right:-60px; top:-70px; width:260px;height:260px;border-radius:50%; opacity:.16; filter:blur(6px);}
+  .day-banner .row{display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+  .day-banner .dn{font-size:44px; font-weight:800; line-height:1;}
+  .day-banner .dc{font-size:13px; font-weight:700; border-radius:999px; padding:5px 12px; margin-top:8px; display:inline-block;}
+  .day-banner .tt{font-size:23px; font-weight:800; margin:0;}
+  .day-banner .st{font-size:13.5px; opacity:.78; margin-top:4px; letter-spacing:.04em;}
+  .day-banner .chips2{display:flex; gap:8px; margin-left:auto; flex-wrap:wrap;}
+  .day-banner .c2{background:rgba(250,246,239,.14); border:1px solid rgba(250,246,239,.28);
+    backdrop-filter:blur(5px); border-radius:999px; padding:5px 12px; font-size:12px;}
+
+  .timeline{margin-top:16px; display:grid; grid-template-columns:1fr; gap:14px;}
+  .tcard{display:grid; grid-template-columns:112px 1fr; gap:0; background:#fff; border:1px solid var(--line);
+    border-radius:16px; overflow:hidden; box-shadow:0 5px 18px rgba(42,33,25,.05);}
+  @media(max-width:640px){.tcard{grid-template-columns:1fr}.tcard .tl{flex-direction:row; align-items:baseline; gap:10px; padding:10px 16px; border-bottom:1px dashed var(--line); border-right:none}}
+  .tcard .tl{border-right:1px dashed var(--line); padding:18px 14px; display:flex; flex-direction:column; gap:6px; background:#FBF8F2;}
+  .tcard .tm{font-size:19px; font-weight:800; line-height:1.1;}
+  .tcard .dur{font-size:12px; opacity:.7;}
+  .tcard .main{padding:14px 16px;}
+  .tcard .top{display:flex; gap:12px;}
+  .tcard .ph{width:150px; height:104px; border-radius:10px; object-fit:cover; flex:none; border:1px solid var(--line); background:#eee;}
+  @media(max-width:640px){.tcard .ph{width:120px; height:88px}}
+  .tcard .ttl{font-size:17px; font-weight:800; line-height:1.35;}
+  .tcard .chipx{display:inline-block; font-size:11px; border-radius:999px; padding:2px 9px; margin-top:6px; color:#fff;}
+  .kv{margin:10px 0 0; display:grid; grid-template-columns:1fr; gap:5px;}
+  .kv .kv-row{display:flex; gap:8px; font-size:13px; line-height:1.55; align-items:flex-start;}
+  .kv .k{flex:none; min-width:46px; font-weight:700; color:var(--gold); letter-spacing:.05em;}
+  .kv .v{color:#3f382f;}
+  .notes{margin-top:10px; display:grid; grid-template-columns:1fr; gap:7px;}
+  .note{display:flex; gap:8px; align-items:flex-start; border-radius:9px; padding:8px 11px; font-size:12.8px; line-height:1.55; border:1px solid;}
+  .note b{flex:none; font-size:11.5px; padding:2px 8px; border-radius:6px; color:#fff; margin-top:1px;}
+  .note.n-gold{background:#FBF3E2; border-color:#E9D3A4;} .note.n-gold b{background:var(--gold);}
+  .note.n-green{background:#EEF4EF; border-color:#C6DACD;} .note.n-green b{background:var(--green);}
+  .note.n-red{background:#F9ECEA; border-color:#E5C2BA;} .note.n-red b{background:var(--red);}
+  .note.n-ink{background:#F0ECE4; border-color:#D8CFBE;} .note.n-ink b{background:var(--brown);}
+  .navgo{display:inline-flex; align-items:center; gap:6px; margin:12px 0 0 0; justify-content:flex-end;
+    text-decoration:none; background:var(--ink); color:var(--paper) !important; font-size:12.5px;
+    border-radius:9px; padding:8px 14px; font-weight:600; width:auto; float:right;}
+  .navgo:hover{background:#44362a}
+
+  /* ---------- 美食图鉴 ---------- */
+  .food-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  @media(max-width:960px){.food-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.food-grid{grid-template-columns:1fr}}
+  .fcard{background:#fff; border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 5px 18px rgba(42,33,25,.05);}
+  .fcard .fph{position:relative; height:168px; overflow:hidden;}
+  .fcard .fph img{width:100%; height:100%; object-fit:cover;}
+  .fcard .fno{position:absolute; left:10px; top:10px; background:rgba(42,33,25,.78); color:#FAF6EF;
+    font-size:11px; border-radius:999px; padding:3px 10px; font-weight:700;}
+  .fcard .fb{padding:14px 16px;}
+  .fcard .fn{font-size:17px; font-weight:800;}
+  .fcard .fd{font-size:13px; opacity:.72; margin:4px 0 10px; line-height:1.55;}
+  .fcard .shop{font-size:12.8px; color:#3f382f; line-height:1.7;}
+  .fcard .shop b{color:var(--red); font-weight:700;}
+  .fcard .talk{margin-top:10px; background:#FBF3E2; border:1px solid #E9D3A4; border-radius:9px;
+    padding:8px 11px; font-size:12.8px; line-height:1.6; color:#6b5a2c;}
+  .fcard .talk b{color:#8a6d1f;}
+
+  /* ---------- 预约清单表格 ---------- */
+  .tbl-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:14px; background:#fff;}
+  table{width:100%; border-collapse:collapse; font-size:13.2px; min-width:760px;}
+  thead th{background:var(--ink); color:#FAF6EF; padding:11px 14px; text-align:left; font-weight:700; white-space:nowrap;}
+  tbody td{padding:10px 14px; border-top:1px solid var(--line); vertical-align:top; line-height:1.6;}
+  tbody tr:nth-child(even){background:#F7F2E9;}
+
+  /* ---------- 须知卡片 ---------- */
+  .tips-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  @media(max-width:960px){.tips-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.tips-grid{grid-template-columns:1fr}}
+  .tcard2{border:1px solid var(--line); border-radius:14px; padding:16px; background:#fff;}
+  .tcard2 .tk{font-size:14.5px; font-weight:800; margin-bottom:8px; display:flex; align-items:center; gap:8px;}
+  .tcard2 .tk .ic{width:26px;height:26px;border-radius:8px; display:flex;align-items:center;justify-content:center; color:#FAF6EF; font-size:13px;}
+  .tcard2 p{margin:0; font-size:12.8px; line-height:1.75; color:#4d453c;}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink); color:#C9C0B2; margin-top:50px; padding:34px 0 26px; font-size:12.5px; line-height:1.9;}
+  footer .src{opacity:.8}
+  footer a{color:#E8DFCF;}
+
+  .toast{position:fixed; left:50%; bottom:34px; transform:translateX(-50%) translateY(20px); opacity:0;
+    background:var(--ink); color:var(--paper); padding:12px 20px; border-radius:12px; font-size:13.5px;
+    transition:.3s; z-index:99; pointer-events:none; box-shadow:0 8px 28px rgba(0,0,0,.25);}
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+  @media(max-width:760px){
+    .nav-links{display:none;}
+    .day-banner .chips2{width:100%; margin-left:0;}
+    .hero .inner{padding-bottom:40px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ 玻璃拟态导航 ============ -->
+<nav class="glass-nav">
+  <div class="nav-inner">
+    <div class="logo-mark serif">沪</div>
+    <div style="font-weight:800; font-size:15.5px; letter-spacing:.02em;">上海 · 极致奢享深度游<span style="opacity:.6;font-weight:400;font-size:12px;margin-left:8px;">梧桐深处 5天4夜</span></div>
+    <div class="nav-links">
+      <a href="#overview">行程总览</a>
+      <a href="#day1">Day1</a><a href="#day2">Day2</a><a href="#day3">Day3</a><a href="#day4">Day4</a><a href="#day5">Day5</a>
+      <a href="#food">美食图鉴</a><a href="#book">预约清单</a><a href="#tips">行前须知</a>
+    </div>
+    <button class="pdf-btn" id="pdfBtn">下载 PDF</button>
+  </div>
+</nav>
+
+<!-- ============ 英雄横幅 ============ -->
+<header class="hero">
+  <img class="bg" src="assets/img/hero.jpg" alt="上海外滩夜景">
+  <div class="veil"></div>
+  <div class="inner wrap">
+    <div class="overline serif">SHANGHAI · 2026.10.8 — 10.12</div>
+    <h1 class="serif">上海 · 魔都深度自由行
+      <span class="l2">梧桐深处 · 顺路零折返的 5 天 4 夜</span>
+    </h1>
+    <div class="meta">5天4夜 · 10/8 虹桥T1抵达 → 静安/衡复/闵行/虹口片区顺向推进 → 10/12 浦东T2返程</div>
+    <div class="chips">
+      <span class="chip"><i style="background:#C9962E"></i>顺路零折返·地理分区</span>
+      <span class="chip"><i style="background:#B4432C"></i>经典地标全制霸</span>
+      <span class="chip"><i style="background:#3E6B5E"></i>ACL康复友好·松弛节奏</span>
+      <span class="chip"><i style="background:#5C4A3A"></i>在地国宝美食全收录</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 天数筛选胶囊 ============ -->
+<div class="capsule-bar">
+  <div class="wrap">
+    <div class="caps" id="caps">
+      <button data-d="0" class="on"><span class="d">全部</span></button>
+      <button data-d="1"><span class="d">Day 1</span><span class="dt">10/8(四)</span></button>
+      <button data-d="2"><span class="d">Day 2</span><span class="dt">10/9(五)</span></button>
+      <button data-d="3"><span class="d">Day 3</span><span class="dt">10/10(六)</span></button>
+      <button data-d="4"><span class="d">Day 4</span><span class="dt">10/11(日)</span></button>
+      <button data-d="5"><span class="d">Day 5</span><span class="dt">10/12(一)</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 行程总览 ============ -->
+<section id="overview">
+  <div class="wrap">
+    <div class="sec-head"><span class="k serif">行程总览</span><span class="sub">OVERVIEW · 每日片区一图看懂</span></div>
+    <p class="sec-note">图为上海市区底图（高德瓦片本地拼接），半透明虚线椭圆圈出每日片区；<b>地图仅作视觉标注，一键导航请用下方时间轴卡片右下角的按钮</b>。10/10 为调休上班日、10/8 为长假后首个工作日，人潮普遍平缓；10/12（周一）为全市博物馆闭馆日，Day 5 安排北外滩户外晨走与从容返程。</p>
+
+    <div class="map-card">
+      <div class="map-frame">
+        <img src="assets/map/sh_map_z14.png" alt="上海行程地图底图（高德）">
+        <div class="map-ov" id="mapOv"></div>
+        <div class="offmap">➜ 浦东T2 在画面东侧约45km 车程约50-60分钟</div>
+        <div class="map-attr">底图 © 高德地图（webrd 瓦片拼接）</div>
+      </div>
+      <div class="map-legend" id="mapLegend"></div>
+    </div>
+
+    <div style="height:22px"></div>
+
+    <div class="zone-grid">
+      <div class="zcard" style="--c:#C9962E">
+        <div class="zd">DAY 1 · 10/8（四）</div><div class="zt serif">西隅慢启动 · 抵达之夜</div>
+        <ul><li>虹桥T1 抵达 → 会合 → 打车入住</li><li>定西路美食街晚餐</li><li>上生新所夜游 + 茑屋书店</li></ul>
+        <span class="zh" style="background:#C9962E">宿 · 如家neo 静安寺中山公园店（第1-2晚）</span>
+      </div>
+      <div class="zcard" style="--c:#B4432C">
+        <div class="zd">DAY 2 · 10/9（五）</div><div class="zt serif">静安 · 衡复海派人文线</div>
+        <ul><li>中山公园晨间慢活</li><li>静安寺 · 华山路火锅午餐</li><li>安福路塞万提斯 · 武康路 · 夏衍旧居</li><li>新利查海派西餐晚餐</li></ul>
+        <span class="zh" style="background:#B4432C">宿 · 如家neo（续住第2晚）</span>
+      </div>
+      <div class="zcard" style="--c:#3E6B5E">
+        <div class="zd">DAY 3 · 10/10（六）</div><div class="zt serif">闵行韩潮 · 换宿虹口北岸</div>
+        <ul><li>韩国街·井亭天地 逛吃（行李随车）</li><li>换宿 如家精选 外滩四川北路店</li><li>邮政博物馆 · 证券博物馆 · 外白渡桥</li><li>鲁迅公园梅园 一尺花园下午茶</li></ul>
+        <span class="zh" style="background:#3E6B5E">宿 · 如家精选（第3-4晚）</span>
+      </div>
+      <div class="zcard" style="--c:#5C4A3A">
+        <div class="zd">DAY 4 · 10/11（日）</div><div class="zt serif">虹口文脉 · 鲁迅与文学</div>
+        <ul><li>上海文学馆·巴金图书馆</li><li>多伦现代美术馆 + 多伦路文化名人街</li><li>万寿斋山阴路午餐</li><li>甜爱路 · 山阴路漫步 → 四川北路晚餐</li></ul>
+        <span class="zh" style="background:#5C4A3A">宿 · 如家精选（第4晚）</span>
+      </div>
+      <div class="zcard" style="--c:#41517D">
+        <div class="zd">DAY 5 · 10/12（一）</div><div class="zt serif">慢活返程 · 北外滩晨光</div>
+        <ul><li>周一博物馆闭馆日，纯户外留白</li><li>北外滩滨江 · 晨走</li><li>退房 → 12:30 出发 → 15:35 浦东T2起飞</li></ul>
+        <span class="zh" style="background:#41517D">返程 · 王师傅航班 15:35</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 每日行程 ============ -->
+<div class="wrap" id="days">
+
+<!-- ███ Day 1 ███ -->
+<div class="day-sec" id="day1" data-d="1">
+  <div class="day-banner">
+    <div class="glow" style="background:#C9962E"></div>
+    <div class="row">
+      <div><div class="dn serif">Day 1</div><span class="dc" style="background:#C9962E">10/8（四）</span></div>
+      <div><h3 class="tt serif">西隅慢启动 · 抵达之夜</h3><div class="st">片区：长宁 · 中山公园 / 上生新所 —— 机场直达酒店，今晚不折腾</div></div>
+      <div class="chips2"><span class="c2">抵达·会合</span><span class="c2">定西路烟火气</span><span class="c2">上生新所夜游</span></div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">17:10</div><div class="dur">建议 45 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/hero.jpg" alt="虹桥机场" onerror="imgErr(this)"><div>
+          <div class="ttl">虹桥T1 抵达 · 与马师傅会合</div><span class="chipx" style="background:#C9962E">抵达 · 会合</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">说明</span><span class="v">王师傅 17:10 落地虹桥T1，取行李后在到达层稍歇；与马师傅在马师傅家附近会合点碰头（或T1到达层直接碰头），合流后打车前往酒店。</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">出租车/网约车：T1到达层出门即上客点，至延安西路1119号约 20 分钟。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明「虹桥T1」到达口外橙黄色出租/网约车指引牌；马师傅车牌可直接通过打车APP同步。</span></div>
+            <div class="note n-green"><b>康复</b><span>王师傅落地先坐会儿缓一缓；马师傅不必进航站楼，双方约在上客点即可。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="上海虹桥国际机场T1航站楼">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">18:40</div><div class="dur">建议 30 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/rjh_neo.jpg" alt="如家neo门店示意" onerror="imgErr(this)"><div>
+          <div class="ttl">入住 · 如家neo 静安寺中山公园店</div><span class="chipx" style="background:#C9962E">住宿 A（第1-2晚）</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">延安西路1119号（近定西路/中山公园）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">虹桥T1打车约20分钟；前台可协助行李。</span></div>
+            <div class="kv-row"><span class="k">电话</span><span class="v">携程/美团订单页可查，建议提前电话确认延迟到店（18:40后到店正常）。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明延安西路临街黄色「如家酒店·neo」招牌（图为品牌同款门店示意，实际以现场门头为准）。</span></div>
+            <div class="note n-green"><b>康复</b><span>入住后在房间休整 20 分钟再出门晚餐，行程第一天不排任务。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="如家neo上海静安寺中山公园店">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">19:20</div><div class="dur">建议 90 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/congyou.jpg" alt="本帮葱油拌面" onerror="imgErr(this)"><div>
+          <div class="ttl">晚餐 · 定西路美食街（本帮烟火气）</div><span class="chipx" style="background:#C9962E">必吃 · 晚餐</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">定西路（近延安西路，酒店步行约 8 分钟）</span></div>
+            <div class="kv-row"><span class="k">必点</span><span class="v">本帮红烧肉、葱油拌面、砂锅小馄饨、烧烤；老上海面馆与排挡扎堆，随性挑选。</span></div>
+            <div class="kv-row"><span class="k">替代</span><span class="v">也可步行 5 分钟去上生新所园区内选西餐/日料/咖啡简餐。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明定西路沿街各家霓虹招牌，人气最旺的排挡基本不踩雷。</span></div>
+            <div class="note n-ink"><b>避峰</b><span>10/8 为长假后首个工作日晚上，街道客流平缓，正是本地人散步吃饭的氛围。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="定西路美食街">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">20:50</div><div class="dur">建议 60 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/shangsheng.jpg" alt="上生新所" onerror="imgErr(this)"><div>
+          <div class="ttl">上生新所夜游 · 茑屋书店</div><span class="chipx" style="background:#C9962E">核心名胜 · 夜景</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">延安西路1262号（1924年哥伦比亚乡村俱乐部旧址）</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">园区全天开放；茑屋书店 10:00–22:00。</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费进园，特殊展览另收费。</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">定西路步行约 10 分钟，酒店步行回程约 8 分钟。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明圆弧形连廊 + 马赛克泳池 + 茑屋书店暖黄灯光，夜景灯光极美。</span></div>
+            <div class="note n-green"><b>康复</b><span>园内座椅充足，逛完泳池+书店即可，全程平地缓行。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="上生新所">一键导航 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ███ Day 2 ███ -->
+<div class="day-sec" id="day2" data-d="2">
+  <div class="day-banner">
+    <div class="glow" style="background:#B4432C"></div>
+    <div class="row">
+      <div><div class="dn serif">Day 2</div><span class="dc" style="background:#B4432C">10/9（五）</span></div>
+      <div><h3 class="tt serif">静安 · 衡复海派人文线</h3><div class="st">片区：静安寺 — 华山路 — 安福路 — 衡复风貌区 —— 一整天不跨区</div></div>
+      <div class="chips2"><span class="c2">寺庙晨光</span><span class="c2">潮汕火锅午餐</span><span class="c2">海派西餐晚餐</span></div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">08:30</div><div class="dur">建议 90 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/zhongshan.jpg" alt="中山公园" onerror="imgErr(this)"><div>
+          <div class="ttl">中山公园 · 晨间慢活</div><span class="chipx" style="background:#B4432C">核心名胜 · 免费公园</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">长宁路780号</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">24小时开放</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费（五星级公园）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">酒店打车约 5 分钟 / 步行约 15 分钟；地铁2/3/4号线中山公园站。</span></div>
+            <div class="kv-row"><span class="k">必看</span><span class="v">150年古悬铃木、荷池清月、梧桐步道。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明长宁路「中山公园」南大门石牌坊。</span></div>
+            <div class="note n-green"><b>康复</b><span>全程平缓步道，长椅密集，走半小时歇一会儿即可。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="上海中山公园">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">10:30</div><div class="dur">建议 90 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/jingansi.jpg" alt="静安寺" onerror="imgErr(this)"><div>
+          <div class="ttl">静安寺 · 千年古刹金顶</div><span class="chipx" style="background:#B4432C">核心名胜 · 门票50元</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">南京西路1686号</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">7:30–17:00（16:30 停止入内）</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">50元（含3支香；学生/60岁以上半价）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">中山公园打车约 10 分钟；地铁2/7/14号线静安寺站。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明金光闪闪的宝塔塔尖，隔几条街都能看到，绝不会走错。</span></div>
+            <div class="note n-ink"><b>避峰</b><span>10/9 为工作日，上午游客平缓；殿内安静礼佛体验好。</span></div>
+            <div class="note n-red"><b>红线</b><span>部分殿宇禁止摄影，佛像前勿随意拍照；着装端庄，殿内低声。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="静安寺">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">12:30</div><div class="dur">建议 90 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/hotpot.jpg" alt="潮汕牛肉火锅" onerror="imgErr(this)"><div>
+          <div class="ttl">午餐 · 魔都潮滋味 潮汕牛肉火锅·粿条（华山路店）</div><span class="chipx" style="background:#B4432C">指定餐厅 · 火锅</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">华山路1589号</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">10:00–23:30（午市错峰 12:30 前到店）</span></div>
+            <div class="kv-row"><span class="k">人均</span><span class="v">约 76 元（评分 4.6）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">静安寺打车约 15 分钟；地铁11号线交通大学站 6 号口步行约 150 米。</span></div>
+            <div class="kv-row"><span class="k">必点</span><span class="v">鲜牛肉丸、吊龙、匙柄、粿条；灵魂蘸料＝潮汕沙茶酱碟。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明华山路临街「魔都潮滋味」招牌，交通大学站 6 号口出站即见。</span></div>
+            <div class="note n-ink"><b>避峰</b><span>火锅午市 11:30 起上客，建议 12:30 前到店免排队；也可大众点评提前取号。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="魔都潮滋味华山路店">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">14:30</div><div class="dur">建议 75 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/cervantes.jpg" alt="塞万提斯图书馆" onerror="imgErr(this)"><div>
+          <div class="ttl">安福路 · 塞万提斯图书馆（西班牙文化中心）</div><span class="chipx" style="background:#B4432C">核心名胜 · 免费</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">安福路208号</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">周一至周六 11:00–18:30</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费（西语原版书墙 + 文化展览免费阅览）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">华山路打车约 8 分钟，或沿安福路梧桐街区步行约 15 分钟。</span></div>
+            <div class="kv-row"><span class="k">顺逛</span><span class="v">安福路沿线：多抓鱼循环书店、野兽派、设计小店。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明安福路208号门头「Biblioteca Miguel de Cervantes · 塞万提斯图书馆」字样。</span></div>
+            <div class="note n-red"><b>红线</b><span>馆内请安静阅览，部分展区禁止拍照。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="塞万提斯图书馆 安福路208号">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">15:45</div><div class="dur">建议 45 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/xiayan.jpg" alt="夏衍旧居" onerror="imgErr(this)"><div>
+          <div class="ttl">衡复风貌区 · 夏衍旧居</div><span class="chipx" style="background:#B4432C">核心名胜 · 免费</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">乌鲁木齐南路178号2号楼（衡复艺术中心院内）</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">周二 / 四 / 五 / 六 10:00–16:30（16:00 停止入馆；10/9 周五正常开放）</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费，个人免预约（团队可现场咨询）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">塞万提斯图书馆打车约 5 分钟（或沿安福路—乌鲁木齐南路步行约 15 分钟）。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明乌鲁木齐南路178号院内三栋老洋房，2号楼为英式乡村风格、尖券门洞的夏衍旧居。</span></div>
+            <div class="note n-red"><b>红线</b><span>16:00 停止入馆，请 15:45 前抵达；文保建筑，室内请勿触碰展品、勿用闪光灯。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="夏衍旧居 乌鲁木齐南路178号">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">16:45</div><div class="dur">建议 60 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/wukang.jpg" alt="武康大楼" onerror="imgErr(this)"><div>
+          <div class="ttl">衡复风貌区 · 武康路漫步 / 武康大楼</div><span class="chipx" style="background:#B4432C">核心名胜 · 免费</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">武康路 — 淮海中路（武康大楼在淮海中路1842-1858号）</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费（老洋房街区）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">夏衍旧居打车约 8 分钟（或沿梧桐街区步行约 20 分钟）。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明船型「武康大楼」与三岔路口网红机位；沿武康路一路法国梧桐+老洋房。</span></div>
+            <div class="note n-ink"><b>避峰</b><span>16:45 后光线转柔、游客渐散，正是老洋房街区出片时段。</span></div>
+            <div class="note n-green"><b>康复</b><span>漫步 1 小时以内，沿途咖啡店随时歇脚，18:15 前到新利查晚餐即可。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="武康大楼">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">18:15</div><div class="dur">建议 90 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/luosong.jpg" alt="罗宋汤" onerror="imgErr(this)"><div>
+          <div class="ttl">晚餐 · 新利查西菜馆（海派西餐三件套）</div><span class="chipx" style="background:#B4432C">必吃 · 罗宋汤+炸猪排+菜饭</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">广元路196号（近天平路）</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">午市 11:00–16:00 / 晚市 17:00–20:00</span></div>
+            <div class="kv-row"><span class="k">人均</span><span class="v">约 91 元（40余年海派西餐老店）</span></div>
+            <div class="kv-row"><span class="k">必点</span><span class="v">罗宋汤、上海炸猪排（蘸黄牌辣酱油）、土豆色拉；可加上海菜饭。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明广元路上蓝底「新利查西菜馆」老招牌。</span></div>
+            <div class="note n-green"><b>康复</b><span>晚餐后打车回酒店（约 20 分钟），不再安排夜游，为明日养精蓄锐。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="新利查西菜馆 广元路">一键导航 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ███ Day 3 ███ -->
+<div class="day-sec" id="day3" data-d="3">
+  <div class="day-banner">
+    <div class="glow" style="background:#3E6B5E"></div>
+    <div class="row">
+      <div><div class="dn serif">Day 3</div><span class="dc" style="background:#3E6B5E">10/10（六）</span></div>
+      <div><h3 class="tt serif">闵行韩潮 · 换宿虹口北岸</h3><div class="st">片区：闵行韩国街（唯一外挂点，与换宿日捆绑）→ 虹口 · 北外滩 —— 行李随车，顺向推进</div></div>
+      <div class="chips2"><span class="c2">韩国街逛吃</span><span class="c2">换宿·行李随车</span><span class="c2">双馆+一尺花园</span></div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">09:00</div><div class="dur">建议 120 分钟（含韩式午餐）</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/korea.jpg" alt="韩国街首尔夜市" onerror="imgErr(this)"><div>
+          <div class="ttl">韩国街 · 井亭天地逛吃（换宿日顺路站）</div><span class="chipx" style="background:#3E6B5E">核心名胜 · 免费街区</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">闵行区虹泉路1078号 井亭天地生活广场（韩国街）</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费（街区全天开放）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">酒店A退房后打车约 30 分钟；行李随车，可寄存井亭天地服务台或留后备箱。</span></div>
+            <div class="kv-row"><span class="k">必吃</span><span class="v">韩式炸鸡（富乐满）、韩式炖鸡、烤五花、鱼饼汤；负一层韩超可买小食伴手。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明虹泉路满街韩文招牌 + 「井亭天地」韩文巨幅幕墙；首尔夜市入口有红色五角星门。</span></div>
+            <div class="note n-ink"><b>避峰</b><span>10/10 为调休上班日，白天客流平缓；首尔夜市 17:00 才开市，本次安排上午档（夜市氛围留给下次）。</span></div>
+            <div class="note n-green"><b>康复</b><span>控制在 1.5 小时内：核心逛井亭天地 + 吃一餐韩料即可，不必走满整条街。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="韩国街井亭天地生活广场">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">13:15</div><div class="dur">建议 60 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/rjh_b.jpg" alt="如家精选门店示意" onerror="imgErr(this)"><div>
+          <div class="ttl">换宿 · 如家精选 外滩四川北路地铁站店</div><span class="chipx" style="background:#3E6B5E">住宿 B（第3-4晚）</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">河南北路461号（近天潼路/四川北路）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">韩国街打车约 50–60 分钟（横穿市区，正好车上补个午休）。</span></div>
+            <div class="kv-row"><span class="k">动线</span><span class="v">行李全程随车：退房装车 → 韩国街（寄存/随车） → 到店即入住，无缝衔接。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明河南北路临街深灰+金「如家精选酒店」招牌（图为品牌同款门店示意，以现场为准）。</span></div>
+            <div class="note n-green"><b>康复</b><span>入住后房间休息 20 分钟再出发，正好躲过午后最晒时段。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="如家精选酒店上海外滩四川北路地铁站店">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">14:00</div><div class="dur">建议 60 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/postmuseum.jpg" alt="上海邮政博物馆" onerror="imgErr(this)"><div>
+          <div class="ttl">上海邮政博物馆（邮政大楼）</div><span class="chipx" style="background:#3E6B5E">核心名胜 · 免费</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">天潼路395号（上海邮政大楼2楼）</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">9:00–17:00（16:00 停止入场）；周六开放；<b>周六入口走北苏州路258号</b>。</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费，免预约（带身份证）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">酒店步行约 10 分钟；地铁10/12号线天潼路站3号口。</span></div>
+            <div class="kv-row"><span class="k">必看</span><span class="v">巴洛克式百年邮政大楼、大钟楼、马车邮筒、万国邮票。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明苏州河边钟楼大钟 + 「上海邮政博物馆」门头；周六入口在北苏州路258号（勿走错天潼路正门）。</span></div>
+            <div class="note n-red"><b>红线</b><span>周一 / 周五闭馆（本次周六开放，已核）；16:00 停止入场，别卡点。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="上海邮政博物馆 天潼路395号">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">15:00</div><div class="dur">建议 60 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/secmuseum.jpg" alt="中国证券博物馆" onerror="imgErr(this)"><div>
+          <div class="ttl">中国证券博物馆（浦江饭店旧址）</div><span class="chipx" style="background:#3E6B5E">核心名胜 · 免费</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">黄浦路15号（外白渡桥畔，原浦江饭店）</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">周二至周日 9:30–16:00（15:30 停止入场）；周末及法定节假日延长至 16:30 闭馆。</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费，个人免预约（带身份证）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">邮政博物馆步行约 10 分钟。</span></div>
+            <div class="kv-row"><span class="k">必看</span><span class="v">民国浦江饭店大礼堂、中国第一张股票、红色证券史展陈。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明外白渡桥边欧式红墙建筑上的「中国证券博物馆」字样。</span></div>
+            <div class="note n-red"><b>红线</b><span>周一闭馆；馆内多为木质老建筑，请勿触碰展柜。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="中国证券博物馆 黄浦路15号">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">16:15</div><div class="dur">建议 40 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/waibaidu.jpg" alt="外白渡桥夜景" onerror="imgErr(this)"><div>
+          <div class="ttl">外白渡桥 · 北外滩漫步</div><span class="chipx" style="background:#3E6B5E">经典地标 · 免费</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">中山东一路/黄浦路（苏州河入黄浦江口）</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">证券博物馆出门即到。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明百年钢桁架桥，过桥即达北外滩滨江步道，回望陆家嘴天际线。</span></div>
+            <div class="note n-ink"><b>避峰</b><span>黄昏时段桥面人少、光线最好，正是出片时机。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="外白渡桥">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">17:10</div><div class="dur">建议 75 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/luxunpark.jpg" alt="鲁迅公园梅园湖心岛" onerror="imgErr(this)"><div>
+          <div class="ttl">鲁迅公园 · 梅园 一尺花园下午茶</div><span class="chipx" style="background:#3E6B5E">必吃 · 下午茶</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">鲁迅公园梅园内湖心岛（大连西路345号梅园）</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">10:00–20:00</span></div>
+            <div class="kv-row"><span class="k">人均</span><span class="v">约 61 元（人气高需错峰）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">外白渡桥打车约 15 分钟；地铁3/8号线虹口足球场站。</span></div>
+            <div class="kv-row"><span class="k">必点</span><span class="v">手冲咖啡/果茶 + 招牌甜品，抢临水玻璃房位。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明梅园木栈道入口 + 湖心岛玻璃房（一尺花园门店）。</span></div>
+            <div class="note n-green"><b>康复</b><span>下午茶即当天最长的歇脚时段，湖心岛座椅充足，双脚完全放松。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="一尺花园鲁迅公园店">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">18:40</div><div class="dur">建议 60 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/hongshao.jpg" alt="本帮红烧肉" onerror="imgErr(this)"><div>
+          <div class="ttl">晚餐 · 乍浦路美食街（老牌本帮烟火气）</div><span class="chipx" style="background:#3E6B5E">必吃 · 晚餐</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">乍浦路（海宁路—武进路段，老牌美食街）</span></div>
+            <div class="kv-row"><span class="k">必点</span><span class="v">本帮小炒、红烧肉、油爆虾；虹口老吃客聚集地。</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">鲁迅公园打车约 8 分钟。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明乍浦路沿街老上海排挡霓虹招牌。</span></div>
+            <div class="note n-green"><b>康复</b><span>晚餐后打车回酒店约 5 分钟，饭后不安排走路。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="乍浦路美食街">一键导航 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ███ Day 4 ███ -->
+<div class="day-sec" id="day4" data-d="4">
+  <div class="day-banner">
+    <div class="glow" style="background:#5C4A3A"></div>
+    <div class="row">
+      <div><div class="dn serif">Day 4</div><span class="dc" style="background:#5C4A3A">10/11（日）</span></div>
+      <div><h3 class="tt serif">虹口文脉 · 鲁迅与文学</h3><div class="st">片区：虹口文脉（文学馆—多伦路—山阴路）—— 文脉收官日，午后留白漫步</div></div>
+      <div class="chips2"><span class="c2">文学馆晨读</span><span class="c2">多伦路漫步</span><span class="c2">午后留白</span></div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">09:30</div><div class="dur">建议 90 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/wenxueguan.jpg" alt="上海文学馆·巴金图书馆" onerror="imgErr(this)"><div>
+          <div class="ttl">上海文学馆 · 巴金图书馆（扆虹园旧址）</div><span class="chipx" style="background:#5C4A3A">核心名胜 · 免费</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">江西北路418号（武进路455号次入口，扆虹园/巴金图书馆）</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">9:30–17:30（17:00 停止入馆；周一闭馆，10/11 周日正常开放）</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费；个人凭身份证免预约；团队需提前3天电话 021-56650656</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">酒店步行约 10 分钟；地铁10号线四川北路站3号口步行约 300 米（武进路入口）。</span></div>
+            <div class="kv-row"><span class="k">必看</span><span class="v">扆虹园百年老建筑、「巴金与上海」文献展、文学书房。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明红色「上海文学馆 · 巴金图书馆」指示牌与扆虹园拱形回廊。</span></div>
+            <div class="note n-green"><b>康复</b><span>全程室内参观，各层有电梯；开馆即到人最少。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="上海文学馆 江西北路418号">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">11:00</div><div class="dur">建议 75 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/duolun.jpg" alt="多伦现代美术馆" onerror="imgErr(this)"><div>
+          <div class="ttl">多伦现代美术馆 + 多伦路文化名人街</div><span class="chipx" style="background:#5C4A3A">核心名胜 · 免费</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">多伦路27号（近四川北路，多伦路文化名人街）</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">周二至周日 10:00–18:00（17:30 停止入场）</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费（特展另收费）</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">文学馆打车约 8 分钟。</span></div>
+            <div class="kv-row"><span class="k">必看</span><span class="v">中国第一座公立当代美术馆（三层展厅）；多伦路沿街铜像、名人碑刻与古玩小店。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明「DOLAND · 上海多伦现代美术馆」红黑撞色入口。</span></div>
+            <div class="note n-red"><b>红线</b><span>周一闭馆（本次周日开放，已核）。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="上海多伦现代美术馆">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">12:30</div><div class="dur">建议 60 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/xlong.jpg" alt="万寿斋小笼" onerror="imgErr(this)"><div>
+          <div class="ttl">午餐 · 万寿斋（山阴路老字号小笼）</div><span class="chipx" style="background:#5C4A3A">必吃 · 小笼</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">山阴路123号（鲁迅故居同一条路）</span></div>
+            <div class="kv-row"><span class="k">营业</span><span class="v">04:30–21:00</span></div>
+            <div class="kv-row"><span class="k">人均</span><span class="v">约 25 元</span></div>
+            <div class="kv-row"><span class="k">必点</span><span class="v">三鲜小笼、麻酱冷面/大排面、鲜肉馄饨。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明山阴路老字号「万寿斋」招牌，店小人多、烟火气十足。</span></div>
+            <div class="note n-green"><b>康复</b><span>简餐快吃，午后留白漫步更从容。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="万寿斋 山阴路123号">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">14:00</div><div class="dur">建议 75 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/luxunpark.jpg" alt="甜爱路山阴路" onerror="imgErr(this)"><div>
+          <div class="ttl">甜爱路 · 山阴路漫步（鲁迅故居同街）</div><span class="chipx" style="background:#5C4A3A">午后留白 · 自由漫步</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">甜爱路 — 山阴路（鲁迅公园以南，酒店步行约 15 分钟 / 打车 5 分钟）</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费街区</span></div>
+            <div class="kv-row"><span class="k">必逛</span><span class="v">甜爱路爱心邮筒与爱情墙、山阴路老洋房与鲁迅故居、大陆新村梧桐街景。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明甜爱路路口「甜爱邮筒」与路名牌；山阴路与四川北路平行，走不动随时叫车。</span></div>
+            <div class="note n-green"><b>康复</b><span>控制在 1 小时以内，累了就近在路边咖啡店坐歇——这是全天留白时段。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="甜爱路">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">18:30</div><div class="dur">建议 60 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/hongshao.jpg" alt="虹口本帮晚餐" onerror="imgErr(this)"><div>
+          <div class="ttl">晚餐 · 四川北路商圈（虹口本帮收尾）</div><span class="chipx" style="background:#5C4A3A">必吃 · 晚餐</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">四川北路（近酒店）</span></div>
+            <div class="kv-row"><span class="k">必点</span><span class="v">本帮小炒、腌笃鲜、葱油拌面；老字号与商场餐饮选择都多。</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">酒店步行约 10 分钟。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明四川北路沿线霓虹招牌与老字号店面。</span></div>
+            <div class="note n-green"><b>康复</b><span>晚餐后步行回酒店即休；今日步行量若已达标，直接打车回程。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="四川北路 上海">一键导航 ↗</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ███ Day 5 ███ -->
+<div class="day-sec" id="day5" data-d="5">
+  <div class="day-banner">
+    <div class="glow" style="background:#41517D"></div>
+    <div class="row">
+      <div><div class="dn serif">Day 5</div><span class="dc" style="background:#41517D">10/12（一）</span></div>
+      <div><h3 class="tt serif">慢活返程 · 北外滩晨光</h3><div class="st">片区：北外滩晨走 → 退房 → 浦东T2 —— 周一博物馆闭馆日，正好纯户外留白</div></div>
+      <div class="chips2"><span class="c2">周一闭馆日</span><span class="c2">北外滩晨走</span><span class="c2">15:35 浦东T2起飞</span></div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">08:30</div><div class="dur">建议 45 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/congyou.jpg" alt="慢活早餐" onerror="imgErr(this)"><div>
+          <div class="ttl">慢活早餐 · 酒店附近</div><span class="chipx" style="background:#41517D">慢活</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">安排</span><span class="v">睡到自然醒，四川北路/白玉兰广场附近吃早餐：生煎、豆浆、小馄饨。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-green"><b>康复</b><span>今天是纯返程日，零任务，怎么舒服怎么来。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="白玉兰广场 上海">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">09:15</div><div class="dur">建议 60 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/waibaidu.jpg" alt="北外滩晨走" onerror="imgErr(this)"><div>
+          <div class="ttl">北外滩滨江 · 晨走</div><span class="chipx" style="background:#41517D">户外留白 · 免费</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">北外滩滨江步道（白玉兰广场 — 虹口段）</span></div>
+            <div class="kv-row"><span class="k">门票</span><span class="v">免费</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">酒店打车约 5 分钟 / 步行约 15 分钟。</span></div>
+            <div class="kv-row"><span class="k">必看</span><span class="v">清晨江面与陆家嘴天际线、晨练的上海人、虹口滨江绿道。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明白玉兰造型塔楼与滨江红色步道；10/12 周一全城博物馆闭馆，户外反而清静。</span></div>
+            <div class="note n-ink"><b>避峰</b><span>周一清晨步道人最少，光线柔和，出片极佳。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="北外滩滨江绿地">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">10:30</div><div class="dur">建议 45 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/rjh_b.jpg" alt="退房装车" onerror="imgErr(this)"><div>
+          <div class="ttl">回酒店 · 退房并行李装车</div><span class="chipx" style="background:#41517D">动线</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">安排</span><span class="v">11:15 前完成退房；行李可寄存前台，午餐后再取。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-green"><b>康复</b><span>退房零负重，行李全程由车和人分担。</span></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">11:15</div><div class="dur">建议 60 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/shengjian.jpg" alt="白玉兰广场午餐" onerror="imgErr(this)"><div>
+          <div class="ttl">午餐 · 白玉兰广场（虹口告别餐）</div><span class="chipx" style="background:#41517D">必吃 · 午餐</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">地址</span><span class="v">白玉兰广场（东长治路399号，北外滩）</span></div>
+            <div class="kv-row"><span class="k">必点</span><span class="v">生煎、本帮菜、咖啡简餐皆可；想吃得快就大壶春系生煎。</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">酒店打车约 5 分钟 / 步行 15 分钟。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明白玉兰造型塔楼与商场入口。</span></div>
+            <div class="note n-red"><b>红线</b><span>简餐控制 60 分钟内，12:30 前必须上车出发。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="白玉兰广场 上海">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">12:30</div><div class="dur">约 90 分钟</div></div>
+      <div class="main">
+        <div class="top"><img class="ph" src="assets/img/hero.jpg" alt="浦东机场" onerror="imgErr(this)"><div>
+          <div class="ttl">打车 → 浦东T2</div><span class="chipx" style="background:#41517D">送机 · 动线</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">说明</span><span class="v">12:30 出发，约 14:00 抵达浦东T2；留 95 分钟办理值机/安检（已线上值机更宽裕）。</span></div>
+            <div class="kv-row"><span class="k">交通</span><span class="v">北横通道—延安高架—S1迎宾高速，约 60–70 分钟。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-gold"><b>认路</b><span>认明浦东T2 出发层；王师傅持台胞证+登机牌办理值机。</span></div>
+            <div class="note n-red"><b>红线</b><span>15:35 起飞，务必 12:30 前上车；遇堵车改走中环—S1 备选。</span></div>
+          </div>
+        </div></div>
+        <div style="clear:both"></div>
+        <a class="navgo" target="_blank" rel="noopener" data-nav="上海浦东国际机场T2航站楼">一键导航 ↗</a>
+      </div>
+    </div>
+
+    <div class="tcard">
+      <div class="tl"><div class="tm">15:35</div><div class="dur">起飞</div></div>
+      <div class="main">
+        <div class="top"><div style="width:150px"></div><div>
+          <div class="ttl">浦东T2 · 王师傅搭机离开，江湖再见</div><span class="chipx" style="background:#41517D">送别</span>
+          <div class="kv">
+            <div class="kv-row"><span class="k">安排</span><span class="v">值机 → 安检 → 登机；马师傅送行至出发层即可返程（打车约 40 分钟回市区）。</span></div>
+          </div>
+          <div class="notes">
+            <div class="note n-green"><b>康复</b><span>5 天总行程日均步行 6–8 千步，点位间全部打车衔接，马师傅膝关节全程零压力。</span></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<!-- ============ 美食全图鉴 ============ -->
+<section id="food">
+  <div class="wrap">
+    <div class="sec-head"><span class="k serif">上海国宝美食全图鉴</span><span class="sub">FOOD · 在地名店对照 + 点餐话术</span></div>
+    <p class="sec-note">9 大国宝级沪味：罗宋汤、炸猪排、上海菜饭三件套已在 Day 2 / Day 3 晚餐安排到位；其余按图索骥随兴加餐。</p>
+    <div class="food-grid">
+
+      <div class="fcard"><div class="fph"><img src="assets/img/luosong.jpg" alt="罗宋汤" onerror="imgErr(this)"><span class="fno">海派西餐之魂</span></div>
+        <div class="fb"><div class="fn">罗宋汤</div><div class="fd">番茄牛肉浓汤，海派西餐经典开场，酸甜开胃。</div>
+        <div class="shop"><b>名店对照</b>：新利查西菜馆（广元路）· 德大西菜社（南京西路）· 天鹅申阁</div>
+        <div class="talk"><b>点餐话术</b>：说「一份罗宋汤+炸猪排套餐」，加辣酱油是上海正统吃法。</div></div>
+      </div>
+
+      <div class="fcard"><div class="fph"><img src="assets/img/zhapai.jpg" alt="上海炸猪排" onerror="imgErr(this)"><span class="fno">必吃三件套</span></div>
+        <div class="fb"><div class="fn">上海炸猪排</div><div class="fd">厚切猪排裹面包糠现炸，蘸黄牌辣酱油，外脆里嫩。</div>
+        <div class="shop"><b>名店对照</b>：新利查西菜馆 · 天鹅申阁西菜社（长乐路）</div>
+        <div class="talk"><b>点餐话术</b>：「猪排要现炸的」；上桌第一件事浇辣酱油，配罗宋汤是黄金组合。</div></div>
+      </div>
+
+      <div class="fcard"><div class="fph"><img src="assets/img/caifan.jpg" alt="上海菜饭" onerror="imgErr(this)"><span class="fno">家常国宝</span></div>
+        <div class="fb"><div class="fn">上海菜饭</div><div class="fd">咸肉+青菜焖饭，锅底一层锅巴最香，本帮家常灵魂主食。</div>
+        <div class="shop"><b>名店对照</b>：兰心餐厅（进贤路）· 圆苑（本帮家宴）· 老上海弄堂菜馆</div>
+        <div class="talk"><b>点餐话术</b>：点单时说「要锅底的锅巴，加一勺猪油更香」——懂行暗号。</div></div>
+      </div>
+
+      <div class="fcard"><div class="fph"><img src="assets/img/xlong.jpg" alt="上海小笼包" onerror="imgErr(this)"><span class="fno">皮薄汁多</span></div>
+        <div class="fb"><div class="fn">上海小笼包</div><div class="fd">半透明薄皮裹鲜肉汤汁，上海人早饭里的顶流。</div>
+        <div class="shop"><b>名店对照</b>：万寿斋（山阴路）· 南翔馒头店（城隍庙）· 莱莱小笼（天津路）</div>
+        <div class="talk"><b>口诀</b>：先开窗、后喝汤、轻轻提、慢慢移；点单说「一两鲜肉小笼+一碟姜丝醋」。</div></div>
+      </div>
+
+      <div class="fcard"><div class="fph"><img src="assets/img/shengjian.jpg" alt="生煎馒头" onerror="imgErr(this)"><span class="fno">底板脆香</span></div>
+        <div class="fb"><div class="fn">生煎馒头</div><div class="fd">半发面包子煎出焦脆底板，肉馅带汁，上海叫「馒头」不叫「包」。</div>
+        <div class="shop"><b>名店对照</b>：大壶春（云南南路）· 东泰祥（重庆北路）</div>
+        <div class="talk"><b>点餐话术</b>：「四只生煎，一碗牛肉粉丝汤」；先咬小口喝汤再吃，防烫。</div></div>
+      </div>
+
+      <div class="fcard"><div class="fph"><img src="assets/img/crab.jpg" alt="大闸蟹" onerror="imgErr(this)"><span class="fno">时令顶流</span></div>
+        <div class="fb"><div class="fn">大闸蟹</div><div class="fd">「秋风起蟹脚痒」，10月中旬正是吃蟹黄金期，清蒸原味最地道。</div>
+        <div class="shop"><b>名店对照</b>：王宝和（老字号）· 蟹尊苑 · 苏浙汇</div>
+        <div class="talk"><b>点餐话术</b>：母蟹选蟹黄满、公蟹选膏厚；「两只三两母蟹清蒸，配姜丝镇江醋」。</div></div>
+      </div>
+
+      <div class="fcard"><div class="fph"><img src="assets/img/hongshao.jpg" alt="本帮红烧肉" onerror="imgErr(this)"><span class="fno">浓油赤酱</span></div>
+        <div class="fb"><div class="fn">本帮红烧肉</div><div class="fd">浓油赤酱、糖色红亮、入口即化，海派本帮第一硬菜。</div>
+        <div class="shop"><b>名店对照</b>：兰心餐厅 · 老吉士（天平路）· 圆苑</div>
+        <div class="talk"><b>点餐话术</b>：「要肥瘦相间三层肉，酱汁拌饭」；配草头圈子是懂行组合。</div></div>
+      </div>
+
+      <div class="fcard"><div class="fph"><img src="assets/img/baizhan.jpg" alt="白斩鸡" onerror="imgErr(this)"><span class="fno">皮黄肉嫩</span></div>
+        <div class="fb"><div class="fn">白斩鸡</div><div class="fd">三黄鸡白煮，皮爽肉嫩，配姜蓉酱油，上海冷盘之王。</div>
+        <div class="shop"><b>名店对照</b>：小绍兴（云南南路）· 振鼎鸡（多店）</div>
+        <div class="talk"><b>点餐话术</b>：「半只白斩鸡+一碗鸡粥」；腿肉最嫩，跟店家说「要腿」。</div></div>
+      </div>
+
+      <div class="fcard"><div class="fph"><img src="assets/img/congyou.jpg" alt="葱油拌面" onerror="imgErr(this)"><span class="fno">简单极致</span></div>
+        <div class="fb"><div class="fn">葱油拌面</div><div class="fd">现熬葱油+酱油，一碗拌面见真章，上海面馆基本功。</div>
+        <div class="shop"><b>名店对照</b>：沧浪亭（淮海中路）· 老半斋 · 阿娘面</div>
+        <div class="talk"><b>点餐话术</b>：「一碗葱油拌面加个荷包蛋」；葱油要现熬的才香。</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 预约清单 ============ -->
+<section id="book">
+  <div class="wrap">
+    <div class="sec-head"><span class="k serif">预约与订位清单</span><span class="sub">BOOKING · 出发前照表操课</span></div>
+    <p class="sec-note">以下开放时间均为 2026-09-24 联网核验结果；临近出发请以各官方渠道当日公告为准。</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>项目</th><th>是否需预约</th><th>官方 / 可靠渠道</th><th>建议提前天数</th><th>特殊规定</th></tr></thead>
+        <tbody>
+          <tr><td>静安寺</td><td>不需预约，现场购票</td><td>现场 / 官方公众号</td><td>0 天</td><td>门票 50 元；16:30 停止入场；部分殿宇禁摄影</td></tr>
+          <tr><td>魔都潮滋味（华山路店）</td><td>建议订位 / 取号</td><td>大众点评在线取号 · 门店电话</td><td>当天午市前</td><td>火锅午市 11:00 起；12:30 前到店免排队</td></tr>
+          <tr><td>上海邮政博物馆</td><td>不需预约</td><td>现场（带身份证）</td><td>0 天</td><td>周一/周五闭馆；16:00 停止入场；周六入口在北苏州路258号</td></tr>
+          <tr><td>中国证券博物馆</td><td>不需预约</td><td>现场（带身份证）</td><td>0 天</td><td>周一闭馆；15:30 停止入场；周末延至 16:30 闭馆</td></tr>
+          <tr><td>上海文学馆·巴金图书馆</td><td>个人免预约</td><td>现场凭身份证；团队 021-56650656</td><td>0 天 / 团队提前3天</td><td>周一闭馆；17:00 停止入馆；9:30 开馆</td></tr>
+          <tr><td>多伦现代美术馆</td><td>不需预约</td><td>现场</td><td>0 天</td><td>周一闭馆；17:30 停止入场；特展可能收费</td></tr>
+          <tr><td>一尺花园（鲁迅公园店）</td><td>无需预约</td><td>现场 / 大众点评排队</td><td>0 天</td><td>湖心岛临水位先到先得；人均约 61 元</td></tr>
+          <tr><td>如家neo / 如家精选 两店</td><td>已订房</td><td>携程 / 如家APP / 订单电话</td><td>已确认</td><td>延迟到店请提前电话告知前台</td></tr>
+          <tr><td>浦东T2 值机（10/12 15:35 航班）</td><td>建议线上值机</td><td>航司官方APP</td><td>起飞前 24h</td><td>国际航班提前 2 小时到机场；12:30 前从酒店出发</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 行前须知 ============ -->
+<section id="tips">
+  <div class="wrap">
+    <div class="sec-head"><span class="k serif">行前实用须知</span><span class="sub">TIPS · 台胞游上海</span></div>
+    <div class="tips-grid">
+      <div class="tcard2"><div class="tk"><span class="ic" style="background:#C9962E">证</span>签证与入境</div>
+        <p>台湾同胞凭「台湾居民来往大陆通行证（台胞证）」免签入境；提前在「海关旅客指尖服务」小程序完成健康/行李申报，通关更快。</p></div>
+      <div class="tcard2"><div class="tk"><span class="ic" style="background:#B4432C">付</span>手机支付与现金</div>
+        <p>支付宝/微信绑定台胞证+境外信用卡即可完成实名与支付，绝大多数商户可用；备 300-500 元现金应急；出租车、地铁均可扫码。</p></div>
+      <div class="tcard2"><div class="tk"><span class="ic" style="background:#3E6B5E">行</span>市内交通</div>
+        <p>高德/滴滴打车全行程衔接（点位间均为短程）；地铁 2/3/4/7/10/11 号线覆盖全部点位，刷「上海交通卡乘车码」/大都会APP。</p></div>
+      <div class="tcard2"><div class="tk"><span class="ic" style="background:#5C4A3A">天</span>气候与穿着</div>
+        <p>10 月中旬上海约 18–25℃，早晚微凉；秋装+薄外套，备折叠伞防偶雨；白天体感舒适，午后室内展馆冷气足。</p></div>
+      <div class="tcard2"><div class="tk"><span class="ic" style="background:#C9962E">电</span>插座与电压</div>
+        <p>大陆为 220V 两孔/三孔插座；台湾两扁脚插头可直接插入两孔，但 110V 电器需变压器；手机充电器多为宽电压（100–240V）可直用。</p></div>
+      <div class="tcard2"><div class="tk"><span class="ic" style="background:#B4432C">退</span>退税与免税</div>
+        <p>大陆一般无游客现场退税；离境免税购物在浦东机场 T2 国际出发层，可提前 2 小时到达慢慢逛。</p></div>
+      <div class="tcard2"><div class="tk"><span class="ic" style="background:#3E6B5E">法</span>地方法令红线</div>
+        <p>室内/公共场所全面禁烟（违者罚款 200 元起）；地铁车厢禁食；过马路走斑马线、绿灯快速通过；文保建筑内勿触碰展品。</p></div>
+      <div class="tcard2"><div class="tk"><span class="ic" style="background:#5C4A3A">康</span>康复贴士（马师傅）</div>
+        <p>ACL 术后第 9 周：建议日步行 6–8 千步内；点位间一律打车；站立/起身用扶手；每天两段固定坐歇（本行程已按此设计）。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer>
+  <div class="wrap">
+    <div style="font-size:15px; font-weight:800; color:#E8DFCF; margin-bottom:8px;">上海 · 魔都深度自由行 · 行程规划指南</div>
+    <div>版本：V1.1 本地预览版（5天4夜版）｜ 数据核验日期：2026-09-24（联网核实开放时间 / 门票 / 预约规则 / 2026国庆调休安排）</div>
+    <div class="src">信息来源：高德地图（底图瓦片 © 高德地图）· 各场馆官网与文旅部门公告（上海文学馆/中国证券博物馆/上海邮政博物馆/多伦现代美术馆/塞万提斯图书馆等）· 携程/大众点评等平台商户信息 · 视觉中国/新华网等实景图（本地化存档，仅供行程参考）</div>
+    <div style="opacity:.7; margin-top:8px;">免责声明：所有开放时间、票价与预约规则以各机构当日官方公告为准；行程节奏已按康复需求放缓，具体体力安排请以现场身体状态为准。实景图用于认路参考，门店外观可能随季节变化。</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- 图片防破图兜底 ---------- */
+function imgErr(img){
+  var name = img.getAttribute('alt') || '图';
+  var svg = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">' +
+    '<rect width="600" height="400" fill="#F0ECE3"/>' +
+    '<text x="300" y="180" font-size="26" fill="#8A7F6F" text-anchor="middle" font-family="sans-serif">' + name + '</text>' +
+    '<text x="300" y="220" font-size="16" fill="#B0A692" text-anchor="middle" font-family="sans-serif">图片加载失败·请以现场为准</text></svg>');
+  img.src = svg;
+}
+window.addEventListener('error', function(e){
+  if(e.target && e.target.tagName === 'IMG' && !e.target.src.startsWith('data:')){ imgErr(e.target); }
+}, true);
+
+/* ---------- 一键导航（高德 URI） ---------- */
+document.querySelectorAll('.navgo').forEach(function(a){
+  var kw = a.getAttribute('data-nav') || a.textContent;
+  a.href = 'https://uri.amap.com/search?keyword=' + encodeURIComponent(kw) + '&city=' + encodeURIComponent('上海');
+});
+
+/* ---------- 下载 PDF（预览确认后执行） ---------- */
+document.getElementById('pdfBtn').addEventListener('click', function(){
+  showToast('预览版确认后，我再为你生成 A4 版 PDF 手册（当前不生成）');
+});
+function showToast(msg){
+  var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._h); t._h = setTimeout(function(){ t.classList.remove('show'); }, 2600);
+}
+
+/* ---------- 天数筛选胶囊 ---------- */
+var caps = document.querySelectorAll('#caps button');
+var daySecs = document.querySelectorAll('.day-sec');
+function applyFilter(d){
+  caps.forEach(function(b){ b.classList.toggle('on', parseInt(b.getAttribute('data-d'),10) === d); });
+  daySecs.forEach(function(s){
+    var show = (d === 0 || parseInt(s.getAttribute('data-d'),10) === d);
+    s.style.display = show ? 'block' : 'none';
+  });
+  if(d > 0){
+    var el = document.getElementById('day' + d);
+    if(el){ el.style.display = 'block'; setTimeout(function(){ el.scrollIntoView({behavior:'smooth'}); }, 30); }
+  } else {
+    document.getElementById('overview').scrollIntoView({behavior:'smooth'});
+  }
+}
+caps.forEach(function(b){
+  b.addEventListener('click', function(){ applyFilter(parseInt(b.getAttribute('data-d'),10)); });
+});
+
+/* ---------- 地图叠加层（本地底图 + 经纬度换算坐标） ---------- */
+var MAP = {
+  pois: [
+    ["虹桥T1抵达",13.534,66.76,1,"airport"],["如家neo·静安寺中山公园店",53.18,50.863,1,"hotel"],
+    ["上生新所",51.561,50.331,1,"poi"],["中山公园",51.966,52.127,2,"poi"],
+    ["静安寺",67.743,49.0,2,"poi"],["魔都潮滋味·华山路店",62.788,61.971,2,"food"],
+    ["塞万提斯图书馆",63.748,56.85,2,"poi"],["武康大楼",61.372,59.976,2,"poi"],
+    ["夏衍旧居",66.327,60.242,2,"poi"],["新利查西菜馆",65.822,69.088,2,"food"],
+    ["韩国街·井亭天地",30.576,78.065,3,"poi"],["如家精选·外滩四川北路店",85.695,32.5,3,"hotel"],
+    ["上海邮政博物馆",85.088,31.967,3,"poi"],["中国证券博物馆",89.74,31.635,3,"poi"],
+    ["外白渡桥",90.499,32.433,3,"poi"],["鲁迅公园·梅园",84.936,20.521,3,"poi"],
+    ["一尺花园(湖心岛)",86.2,20.521,3,"food"],["上海文学馆",87.212,31.369,4,"poi"],
+    ["多伦现代美术馆",85.695,25.18,4,"poi"],["甜爱路·山阴路",87.718,21.852,4,"poi"],
+    ["万寿斋·山阴路",86.352,23.516,4,"food"],["北外滩滨江·晨走",92.016,29.505,5,"poi"]
+  ],
+  zones: {1:{cx:33.357,cy:58.546,rx:22.023,ry:10.415},2:{cx:59.855,cy:59.044,rx:10.088,ry:12.244},
+          4:{cx:86.453,cy:27.442,rx:2.959,ry:6.127},5:{cx:88.856,cy:31.002,rx:5.361,ry:3.698}},
+  d3k:{cx:30.576,cy:78.065,rx:3.4,ry:2.6},
+  d3h:{cx:87.718,cy:26.51,rx:4.98,ry:8.19}
+};
+var COLORS = {1:'#C9962E',2:'#B4432C',3:'#3E6B5E',4:'#5C4A3A',5:'#41517D'};
+(function(){
+  var ov = document.getElementById('mapOv');
+  var svgNS = 'http://www.w3.org/2000/svg';
+  var svg = document.createElementNS(svgNS,'svg');
+  svg.setAttribute('viewBox','0 0 100 100'); svg.setAttribute('preserveAspectRatio','none');
+  svg.style.position='absolute'; svg.style.inset='0';
+  var defs = document.createElementNS(svgNS,'defs');
+  var f1 = document.createElementNS(svgNS,'ellipse'); // sample to keep structure
+  defs.appendChild(f1);
+  function addEllipse(z, day){
+    var e = document.createElementNS(svgNS,'ellipse');
+    e.setAttribute('cx', z.cx); e.setAttribute('cy', z.cy);
+    e.setAttribute('rx', Math.max(z.rx, 4.2)); e.setAttribute('ry', Math.max(z.ry, 4.2));
+    e.setAttribute('fill', COLORS[day]); e.setAttribute('fill-opacity','0.07');
+    e.setAttribute('stroke', COLORS[day]); e.setAttribute('stroke-opacity','0.65');
+    e.setAttribute('stroke-width','0.55'); e.setAttribute('stroke-dasharray','2.2 1.2');
+    svg.appendChild(e);
+  }
+  addEllipse(MAP.zones[1],1);
+  addEllipse(MAP.zones[2],2);
+  addEllipse(MAP.zones[4],4);
+  addEllipse(MAP.zones[5],5);
+  var ek = document.createElementNS(svgNS,'ellipse');
+  ek.setAttribute('cx',MAP.d3k.cx); ek.setAttribute('cy',MAP.d3k.cy); ek.setAttribute('rx',3.4); ek.setAttribute('ry',2.6);
+  ek.setAttribute('fill',COLORS[3]); ek.setAttribute('fill-opacity','0.07');
+  ek.setAttribute('stroke',COLORS[3]); ek.setAttribute('stroke-opacity','0.65');
+  ek.setAttribute('stroke-width','0.55'); ek.setAttribute('stroke-dasharray','2.2 1.2'); svg.appendChild(ek);
+  var eh = document.createElementNS(svgNS,'ellipse');
+  eh.setAttribute('cx',MAP.d3h.cx); eh.setAttribute('cy',MAP.d3h.cy); eh.setAttribute('rx',4.98); eh.setAttribute('ry',8.19);
+  eh.setAttribute('fill',COLORS[3]); eh.setAttribute('fill-opacity','0.07');
+  eh.setAttribute('stroke',COLORS[3]); eh.setAttribute('stroke-opacity','0.65');
+  eh.setAttribute('stroke-width','0.55'); eh.setAttribute('stroke-dasharray','2.2 1.2'); svg.appendChild(eh);
+  var ln = document.createElementNS(svgNS,'line');
+  ln.setAttribute('x1',MAP.d3k.cx); ln.setAttribute('y1',MAP.d3k.cy);
+  ln.setAttribute('x2',MAP.d3h.cx); ln.setAttribute('y2',MAP.d3h.cy);
+  ln.setAttribute('stroke',COLORS[3]); ln.setAttribute('stroke-opacity','0.5');
+  ln.setAttribute('stroke-width','0.45'); ln.setAttribute('stroke-dasharray','1.4 1.2');
+  svg.appendChild(ln);
+  var lb = document.createElementNS(svgNS,'text');
+  lb.setAttribute('x',(MAP.d3k.cx+MAP.d3h.cx)/2); lb.setAttribute('y',(MAP.d3k.cy+MAP.d3h.cy)/2-3);
+  lb.setAttribute('fill',COLORS[3]); lb.setAttribute('font-size','3.2'); lb.setAttribute('text-anchor','middle');
+  lb.textContent = '换宿动线 · 行李随车'; svg.appendChild(lb);
+  ov.appendChild(svg);
+
+  MAP.pois.forEach(function(p){
+    var n = document.createElement('div'); n.className = 'm-node';
+    n.style.left = p[1]+'%'; n.style.top = p[2]+'%';
+    var dot = document.createElement('div');
+    dot.className = 'dot' + (p[4]==='hotel'?' sq':'');
+    dot.style.background = COLORS[p[3]];
+    var lb = document.createElement('div'); lb.className='lb'; lb.textContent = p[0];
+    n.appendChild(dot); n.appendChild(lb);
+    ov.appendChild(n);
+  });
+
+  var legend = document.getElementById('mapLegend');
+  var items = [
+    ['#C9962E','Day1 · 西隅（抵达夜）'],['#B4432C','Day2 · 静安/衡复'],
+    ['#3E6B5E','Day3 · 闵行→虹口'],['#5C4A3A','Day4 · 虹口文脉'],['#41517D','Day5 · 北外滩晨走/返程'],
+    ['#2A2119','▲ 住宿点'],['#2A2119','✈ 机场']
+  ];
+  items.forEach(function(it){
+    var d = document.createElement('span'); d.className='li';
+    d.innerHTML = '<span class="sw" style="background:'+it[0]+'"></span>'+it[1];
+    legend.appendChild(d);
+  });
+  var n = document.createElement('span'); n.className='li'; n.style.opacity='.75'; n.textContent='虚线椭圆=当日片区 · 节点仅视觉标注，不参与点击';
+  legend.appendChild(n);
+})();
+</script>
+</body>
+</html>
