@@ -18,7 +18,7 @@
 
 ## 使用方式
 
-- **在线预览**：GitHub Pages 部署后直接访问本仓库 Pages 地址。
+- **在线预览**：[点击访问线上站点](https://yuanjie-ma.github.io/shanghai-trip-202610/)（GitHub Pages 部署）
 - **本地预览**：双击打开 `index.html` 即可（依赖本地 `assets/` 相对路径资源，请保持目录结构完整）。
 
 ## 说明
